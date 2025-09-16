@@ -24,7 +24,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ from, to, duration = 10
 
   return (
     <View>
-      <Text style={{ fontSize: 32, fontWeight: "bold" }}>{displayValue}</Text>
+      <Text style={{ fontSize: 32, fontWeight: "bold" }}>{displayValue.toLocaleString("pt-BR")}</Text>
     </View>
   );
 };
