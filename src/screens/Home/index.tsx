@@ -4,6 +4,7 @@ import { styles } from "./styles";
 import { Navigation } from "../../components/Navigation";
 import { Banner } from "../../components/Banner";
 import { Indicador } from "../../components/Indicador";
+import { EncontreCampanhas } from "../../components/EncontreCampanhas";
 
 import {
   Entypo,
@@ -74,5 +75,8 @@ const renderIndicadoresHistorias = () => (
           {renderIndicadoresUltimasCampanhas()}
           {renderIndicadoresTipoSanguineo()}
           {renderIndicadoresHistorias()}
+
+          <EncontreCampanhas />
+
   );
 }
