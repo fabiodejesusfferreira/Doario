@@ -68,5 +68,11 @@ const renderIndicadoresHistorias = () => (
       
       <Banner />
     </View>
+        <View style={styles.container}>
+          <Banner />
+
+          {renderIndicadoresUltimasCampanhas()}
+          {renderIndicadoresTipoSanguineo()}
+          {renderIndicadoresHistorias()}
   );
 }
