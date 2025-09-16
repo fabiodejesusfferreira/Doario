@@ -1,6 +1,10 @@
-import React from "react";
-import { View, Text } from "react-native";
+import React, { useRef, useState } from "react";
+import { View, NativeScrollEvent, NativeSyntheticEvent } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+
 import { styles } from "./styles";
+import { primaryColor } from "../../constants/palletColors";
+
 import { Navigation } from "../../components/Navigation";
 import { Banner } from "../../components/Banner";
 import { Indicador } from "../../components/Indicador";
@@ -62,12 +66,51 @@ const renderIndicadoresHistorias = () => (
 );
 
 export default function Home() {
+  const scrollViewRef = useRef<ScrollView>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const scrollToTop = () => {
+    toggleButtonBackToTop();
+    scrollViewRef.current?.scrollTo({
+      y: 0,
+      animated: true,
+    });
+  };
+  const toggleButtonBackToTop = () => {
+    setIsVisible(!isVisible);
+  };
+
+  const RenderButtonBackToTop = () => (
+    <View style={styles.buttonBackToTop}>
+      <Entypo name="chevron-up" size={40} color="white" onPress={scrollToTop} />
+    </View>
+  );
+
+  const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const { layoutMeasurement, contentOffset, contentSize } = event.nativeEvent;
+    const isAtTop = contentOffset.y <= 0;
+    const isAtBottom =
+      layoutMeasurement.height + contentOffset.y >= contentSize.height;
+    if (isVisible && isAtTop) toggleButtonBackToTop();
+    else if (!isVisible && isAtBottom) toggleButtonBackToTop();
+  };
 
   return (
     <>
       <View style={styles.navContainer}>
         <Navigation />
       </View>
+      <View
+        style={{
+          borderBottomWidth: 0.5,
+          borderBottomColor: "rgba(0, 0, 0, 0.06)",
+        }}
+      ></View>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        ref={scrollViewRef}
+        onScroll={(event) => handleScroll(event)}
+      >
         <View style={styles.container}>
           <Banner />
 
@@ -82,6 +125,7 @@ export default function Home() {
           </View>
         </View>
       </ScrollView>
+      {isVisible ? <RenderButtonBackToTop /> : null}
     </>
   );
 }
