@@ -5,6 +5,7 @@ import { Navigation } from "../../components/Navigation";
 import { Banner } from "../../components/Banner";
 import { Indicador } from "../../components/Indicador";
 import { EncontreCampanhas } from "../../components/EncontreCampanhas";
+import { Footer } from "../../components/Footer";
 
 import {
   Entypo,
@@ -60,15 +61,13 @@ const renderIndicadoresHistorias = () => (
   </View>
 );
 
+export default function Home() {
 
   return (
-    <View style={styles.container}>
-      <View style={{ height: 40, width: "97%", alignItems: "center", margin: 10 }}>
+    <>
+      <View style={styles.navContainer}>
         <Navigation />
       </View>
-      
-      <Banner />
-    </View>
         <View style={styles.container}>
           <Banner />
 
@@ -78,5 +77,11 @@ const renderIndicadoresHistorias = () => (
 
           <EncontreCampanhas />
 
+          <View style={{ width: "100%", top: 0 }}>
+            <Footer />
+          </View>
+        </View>
+      </ScrollView>
+    </>
   );
 }
