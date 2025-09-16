@@ -3,13 +3,10 @@ import { View, Image } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import doarioLogo from "../../../assets/doario-logo-completa.png";
 import { useNavigation } from "@react-navigation/native";
-import { DrawerNavigationProp } from "@react-navigation/drawer";
-import { RootDrawerParamList } from "./props";
+import { NavigationProps } from "../../types/navigation.types";
 
 import { styles } from "./styles";
 import { primaryColor } from "../../constants/palletColors";
-
-type NavigationProps = DrawerNavigationProp<RootDrawerParamList>;
 
 export function Navigation() {
   const navigation = useNavigation<NavigationProps>();
