@@ -4,8 +4,25 @@ import DoarioLogoRodape from "../../../assets/doário-logo-rodape.png";
 import { DATA_LEGAL, DATA_LINKS_UTEIS } from "./data";
 import { useNavigation } from "@react-navigation/native";
 import { NavigationDrawerProps } from "../../types/drawer.navigation.types";
+import LinkText from "../LinkText";
 
 import { styles, stylesHeader, stylesLinks, stylesCredits } from "./styles";
+
+const handleURL = (itemName: string) => {
+  switch (itemName) {
+    case "Termos de Uso":
+      return "https://github.com/fabiodejesusfferreira/Doario/blob/master/TERMS.md";
+
+    case "Política de Privacidade":
+      return "https://github.com/fabiodejesusfferreira/Doario/blob/master/PRIVACY.md";
+
+    case "Contato":
+      return "mailto:fabiodejesusfferreira@gmail.com";
+
+    default:
+      return "Não identificado";
+  }
+};
 
 const Header = () => (
   <View style={stylesHeader.container}>
@@ -77,7 +94,11 @@ function Links() {
           <Text style={stylesLinks.sectionText}>{section.title}</Text>
         )}
         renderItem={({ item }) => (
-          <Text style={stylesLinks.itemText}>{item}</Text>
+          <LinkText
+            url={handleURL(item)}
+            childrenStyle={{ marginVertical: 8 }}
+            children={<Text style={stylesLinks.itemText}>{item}</Text>}
+          ></LinkText>
         )}
         keyExtractor={(item) => `links-${item}`}
       />
