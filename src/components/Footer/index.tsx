@@ -112,10 +112,18 @@ const Credits = () => (
     <Text style={stylesCredits.textCopyRight}>
       © 2025 Doário+. Todos os direitos reservados.
     </Text>
-    <Text style={stylesCredits.credits}>
-      Site desenvolvido por{" "}
-      <Text style={{ textDecorationLine: "underline" }}>@dejesusdev</Text>
-    </Text>
+    <View style={stylesCredits.creditsContainer}>
+      <Text style={stylesCredits.creditsTextContainer}>
+        Site desenvolvido por{" "}
+      </Text>
+      <LinkText
+        url={"https://github.com/fabiodejesusfferreira"}
+        childrenStyle={stylesCredits.creditsTextContainer}
+        children={
+          <Text style={{ textDecorationLine: "underline" }}>@dejesusdev</Text>
+        }
+      />
+    </View>
   </View>
 );
 
