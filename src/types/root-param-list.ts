@@ -1,4 +1,4 @@
-export type RootDrawerParamList = {
+export type RootParamList = {
   home: undefined;
   campanhas: undefined;
 };
