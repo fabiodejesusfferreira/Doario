@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { NavigationProps } from "../../types/navigation.types";
+import { NavigationDrawerProps } from "../../types/drawer.navigation.types";
 
 import { styles } from "./styles";
 
 export function EncontreCampanhas() {
-  const navigation = useNavigation<NavigationProps>();
+  const navigation = useNavigation<NavigationDrawerProps>();
   function navigateToCampanhas() {
     navigation.navigate("campanhas");
   }
