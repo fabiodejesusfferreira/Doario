@@ -17,7 +17,7 @@ const Header = () => (
 );
 
 function Links() {
-  const navigation = useNavigation<NavigationProps>();
+  const navigation = useNavigation<NavigationDrawerProps>();
 
   const handleNavigation = (itemName: string) => {
     switch (itemName) {
