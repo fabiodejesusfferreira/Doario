@@ -9,9 +9,10 @@ import {
 interface LinkTextType {
   url: string;
   children: React.ReactNode;
+  childrenStyle: any
 }
 
-export default function LinkText({ url, children }: LinkTextType) {
+export default function LinkText({ url, children, childrenStyle }: LinkTextType) {
   const handlePress = async () => {
     const supported = await Linking.canOpenURL(url);
 
@@ -22,7 +23,7 @@ export default function LinkText({ url, children }: LinkTextType) {
 
   return (
     <TouchableOpacity onPress={handlePress}>
-      <Text style={{ textDecorationLine: "underline" }}>{children}</Text>
+      <Text style={[childrenStyle, { textDecorationLine: "underline" }]}>{children}</Text>
     </TouchableOpacity>
   );
 }
