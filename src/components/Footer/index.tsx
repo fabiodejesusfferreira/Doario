@@ -3,7 +3,7 @@ import { View, Image, Text, SectionList } from "react-native";
 import DoarioLogoRodape from "../../../assets/doário-logo-rodape.png";
 import { DATA_LEGAL, DATA_LINKS_UTEIS } from "./data";
 import { useNavigation } from "@react-navigation/native";
-import { NavigationProps } from "../../types/navigation.types";
+import { NavigationDrawerProps } from "../../types/drawer.navigation.types";
 
 import { styles, stylesHeader, stylesLinks, stylesCredits } from "./styles";
 
