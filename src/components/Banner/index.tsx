@@ -4,8 +4,15 @@ import woman from "../../../assets/woman.png";
 import { styles } from "./styles";
 import { primaryColor } from "../../constants/palletColors";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
+import { NavigationDrawerProps } from "../../types/drawer.navigation.types";
 
 export function Banner() {
+  const navigation = useNavigation<NavigationDrawerProps>();
+  function navigateToCampanhas() {
+    navigation.navigate("campanhas");
+  }
+
   return (
     <LinearGradient
       style={styles.container}
@@ -14,10 +21,12 @@ export function Banner() {
       end={{ x: 0.5, y: 1 }}
     >
       <View style={styles.textNButton}>
-        <Text style={styles.text}>Doe hoje,{"\n"}compartilhe{"\n"}vida.</Text>
+        <Text style={styles.text}>
+          Doe hoje,{"\n"}compartilhe{"\n"}vida.
+        </Text>
 
-        <TouchableOpacity style={styles.button}> 
-          <Text style={styles.buttonText}>Agenda sua doação</Text>
+        <TouchableOpacity onPress={navigateToCampanhas} style={styles.button}>
+          <Text style={styles.buttonText}>Agende sua doação</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.imageContainer}>
