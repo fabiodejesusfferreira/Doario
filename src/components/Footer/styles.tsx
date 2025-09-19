@@ -59,7 +59,11 @@ export const stylesCredits = StyleSheet.create({
   textCopyRight: {
     color: footerSecondaryColor
   },
-  credits: {
+  creditsContainer: {
+    marginVertical: 5,
+    flexDirection: "row",
+  },
+  creditsTextContainer: {
     color: footerSecondaryColor
   }
 });
