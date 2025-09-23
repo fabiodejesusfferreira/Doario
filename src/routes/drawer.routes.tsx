@@ -15,7 +15,7 @@ export function DrawerRoutes() {
           title: "Home",
           headerTintColor: "blue",
           headerShown: false,
-          swipeEdgeWidth: 80
+          swipeEdgeWidth: 100,
         }}
       />
 
