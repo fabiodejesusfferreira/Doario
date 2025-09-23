@@ -1,0 +1,172 @@
+[
+    {
+        "id": "8f2c7e1d4b95a3f0c6d9e8427b31ad5f",
+        "name": "DoeVida",
+        "adress": "Av. Almirante Barroso, Belém - PA",
+        "scheduledDate": {
+            "initialTime": 1758369600,
+            "entTime": 1758380400
+        },
+        "location": {
+            "stateAbbreviation": "PA",
+            "state": "Pará",
+            "city": "Belém"
+        },
+        "status": "ativa",
+        "locationType": "Hemocentro",
+        "bloodTypePriority": "O-"
+    },
+    {
+        "id": "a92f7b1c3d8046fa82b915c07ed6f42b",
+        "name": "SangueSolidário",
+        "adress": "Rua da Consolação, São Paulo - SP",
+        "scheduledDate": {
+            "initialTime": 1758456000,
+            "entTime": 1758463200
+        },
+        "location": {
+            "stateAbbreviation": "SP",
+            "state": "São Paulo",
+            "city": "São Paulo"
+        },
+        "status": "ativa",
+        "locationType": "Hospital",
+        "bloodTypePriority": "A+"
+    },
+    {
+        "id": "c18f5a3e29d1470f8b9e1d32c54b72a0",
+        "name": "VidaPlena",
+        "adress": "Av. Afonso Pena, Belo Horizonte - MG",
+        "scheduledDate": {
+            "initialTime": 1758542400,
+            "entTime": 1758549600
+        },
+        "location": {
+            "stateAbbreviation": "MG",
+            "state": "Minas Gerais",
+            "city": "Belo Horizonte"
+        },
+        "status": "programada",
+        "locationType": "UBS",
+        "bloodTypePriority": "B-"
+    },
+    {
+        "id": "f3b29e1a7c5d46ab9f8c42e173a5b6d0",
+        "name": "Gota de Amor",
+        "adress": "Rua das Flores, Curitiba - PR",
+        "scheduledDate": {
+            "initialTime": 1758628800,
+            "entTime": 1758636000
+        },
+        "location": {
+            "stateAbbreviation": "PR",
+            "state": "Paraná",
+            "city": "Curitiba"
+        },
+        "status": "finalizada",
+        "locationType": "Hospital",
+        "bloodTypePriority": "AB+"
+    },
+    {
+        "id": "9e7b2a4c15d84f0e8a6d3b1f47c2e9a1",
+        "name": "Esperança Viva",
+        "adress": "Av. Beira Mar, Fortaleza - CE",
+        "scheduledDate": {
+            "initialTime": 1758715200,
+            "entTime": 1758722400
+        },
+        "location": {
+            "stateAbbreviation": "CE",
+            "state": "Ceará",
+            "city": "Fortaleza"
+        },
+        "status": "finalizada",
+        "locationType": "Hemocentro",
+        "bloodTypePriority": "O+"
+    },
+    {
+        "id": "b72a19d5c84f4e6b9a7d31c29f5e4d03",
+        "name": "Amigos do Sangue",
+        "adress": "Av. Sete de Setembro, Salvador - BA",
+        "scheduledDate": {
+            "initialTime": 1758801600,
+            "entTime": 1758808800
+        },
+        "location": {
+            "stateAbbreviation": "BA",
+            "state": "Bahia",
+            "city": "Salvador"
+        },
+        "status": "cancelada",
+        "locationType": "UBS",
+        "bloodTypePriority": "A-"
+    },
+    {
+        "id": "d84f1a29b7e045fa9c62d13e5b3f7c18",
+        "name": "Coração Vermelho",
+        "adress": "Av. Paulista, São Paulo - SP",
+        "scheduledDate": {
+            "initialTime": 1758888000,
+            "entTime": 1758895200
+        },
+        "location": {
+            "stateAbbreviation": "SP",
+            "state": "São Paulo",
+            "city": "São Paulo"
+        },
+        "status": "ativa",
+        "locationType": "Escola",
+        "bloodTypePriority": "B+"
+    },
+    {
+        "id": "e7f9c12a38d44f6bb9a12f8c5d3e7b29",
+        "name": "Doe e Salve",
+        "adress": "Av. das Américas, Rio de Janeiro - RJ",
+        "scheduledDate": {
+            "initialTime": 1758974400,
+            "entTime": 1758981600
+        },
+        "location": {
+            "stateAbbreviation": "RJ",
+            "state": "Rio de Janeiro",
+            "city": "Rio de Janeiro"
+        },
+        "status": "programada",
+        "locationType": "Igreja",
+        "bloodTypePriority": "AB-"
+    },
+    {
+        "id": "f9a1c4d72e804b1a96e5f0c83a2d1e6b",
+        "name": "Sangue da Vida",
+        "adress": "Praça do Ferreira, Fortaleza - CE",
+        "scheduledDate": {
+            "initialTime": 1759060800,
+            "entTime": 1759068000
+        },
+        "location": {
+            "stateAbbreviation": "CE",
+            "state": "Ceará",
+            "city": "Fortaleza"
+        },
+        "status": "programada",
+        "locationType": "Tenda",
+        "bloodTypePriority": "O-"
+    },
+    {
+        "id": "a3f8e1b24d964c0fa9b52d8c7e4f2a91",
+        "name": "Corrente do Bem",
+        "adress": "Av. Getúlio Vargas, Porto Alegre - RS",
+        "scheduledDate": {
+            "initialTime": 1759147200,
+            "entTime": 1759154400
+        },
+        "location": {
+            "stateAbbreviation": "RS",
+            "state": "Rio Grande do Sul",
+            "city": "Porto Alegre"
+        },
+        "status": "cancelada",
+        "locationType": "Shopping",
+        "bloodTypePriority": "A+"
+    }
+]
