@@ -4,6 +4,7 @@ import { View, Text, ScrollView } from "react-native";
 
 import { styles } from "./styles";
 import { ToolbarCampanhas } from "../../components/ToolbarCampanhas";
+import { ListagemCampanhas } from "../../components/ListagemCampanhas";
 
 export default function Campanhas() {
   return (
@@ -11,6 +12,7 @@ export default function Campanhas() {
       <View style={styles.container}>
         <Text style={styles.title}>Pesquisar por campanhas</Text>
         <ToolbarCampanhas />
+        <ListagemCampanhas />
       </View>
     </ScrollView>
   );
