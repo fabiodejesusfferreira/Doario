@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
-import { footerBackgroundColor, footerSecondaryColor } from "../../constants/palletColors";
+import { secondaryColor, footerSecondaryColor } from "../../constants/palletColors";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: footerBackgroundColor
+    backgroundColor: secondaryColor
   },
 });
 
