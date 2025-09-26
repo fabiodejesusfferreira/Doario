@@ -1,15 +1,19 @@
 import { StyleSheet } from "react-native";
-import { secondaryColor } from "../../constants/palletColors";
+import { primaryColor, secondaryColor } from "../../constants/palletColors";
 
 export const styles = StyleSheet.create({
-  container: {
-    position: 'absolute',
+  scrollViewContainer: {
+    position: "absolute",
     bottom: 0,
-    paddingTop: 20,
-    alignItems: "center",
     width: "100%",
     height: "90%",
-    borderRadius: 40,
+  },
+  container: {
+    paddingBottom: 80,
+    paddingTop: 20,
+    alignItems: "center",
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
     borderColor: "gray",
     backgroundColor: "#cececeff",
   },
@@ -23,39 +27,49 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: 26,
-    fontWeight: "bold"
+    fontWeight: "bold",
+  },
+  divisor: {
+    width: "85%",
+    marginVertical: 20,
+    height: 1,
+    backgroundColor: secondaryColor,
   },
 
-  sectionContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 5
+  buttonsContainer: {
+    width: "85%",
+    marginTop: 40,
   },
-  sectionContainerText: {
+  confirmButtonContainer: {
+    height: 50,
+    backgroundColor: primaryColor,
+    borderRadius: 8,
+    justifyContent: "center",
+    boxShadow: "0px 0px 3px #000000be",
+  },
+  confirmButtonDisabled: {
+    opacity: 0.4,
+    boxShadow: "0px 0px 3px #00000045",
+  },
+  confirmButtonText: {
+    textAlign: "center",
+    textAlignVertical: "center",
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#fff",
+  },
+  clearButtonContainer: {
+    marginTop: 10,
+    height: 50,
+    justifyContent: "center",
+  },
+  clearButtonContainerDisable: {
+    opacity: 0.4
+  },
+  clearButtonText: {
+    textAlign: "center",
+    textAlignVertical: "center",
     fontSize: 18,
     fontWeight: "500",
   },
-
-  locationSectionContainer: {
-    width: "85%"
-  },
-  locationSectionInputContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between"
-  },
-  locationSectionInput: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-    borderColor: "#000",
-    borderRadius: 8,
-    width: "45%",
-    height: 40,
-  },
-  locationSectionTextInput: {
-    fontSize: 16,
-    width: "80%"
-  }
 });
