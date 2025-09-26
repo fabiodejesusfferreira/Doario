@@ -3,3 +3,4 @@ export const primaryColorDarker = "#b30000";
 export const secondaryColor = "#283642ff";
 export const shadowBoxColor = "#00000047";
 export const footerSecondaryColor = "#b0bec5";
+export const backgroundInputColor = "#b6b6b6c7";
