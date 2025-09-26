@@ -1,10 +1,11 @@
-import React, { useState, useCallback } from "react";
-import { View, TextInput, TouchableOpacity, Text } from "react-native";
+import React, { useState } from "react";
+import { View, TextInput, TouchableOpacity } from "react-native";
 import Entypo from "@expo/vector-icons/Entypo";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 import { styles } from "./styles";
+import { useAnimation } from "../../contexts/AnimationProvider";
 
 const SearchBar = () => {
   const [searchInputText, setSearch] = useState<string>("");
@@ -27,11 +28,14 @@ const SearchBar = () => {
   );
 };
 
-const FilterButton = () => (
-  <TouchableOpacity style={styles.filterButtonContainer}>
-    <MaterialIcons name="filter-list" size={28} color="white" />
-  </TouchableOpacity>
-);
+const FilterButton = () => {
+  const { toggleCard } = useAnimation();
+  return (
+    <TouchableOpacity style={styles.filterButtonContainer} onPress={toggleCard}>
+      <MaterialIcons name="filter-list" size={28} color="white" />
+    </TouchableOpacity>
+  );
+};
 
 const SortBy = () => (
   <TouchableOpacity style={styles.sortByContainer}>
